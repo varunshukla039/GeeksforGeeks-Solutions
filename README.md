@@ -15,7 +15,7 @@ Welcome to the GFG-Solutions repository! This repository is a comprehensive coll
 
 **How to Use:**"
 
-**Browse the repository: ** Explore the different folders and categories to find specific problem solutions.
+**Browse the repository:** Explore the different folders and categories to find specific problem solutions.
 
 **Code Reference:** Use the solutions as a reference while solving similar problems on the GeeksforGeeks platform or other coding interviews.
 
