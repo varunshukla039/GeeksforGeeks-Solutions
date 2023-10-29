@@ -1,0 +1,4 @@
+def printAl(arr,n):
+    a=arr[::2]
+    for i in a:
+        print(i, end=" ")
