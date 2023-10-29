@@ -1,0 +1,7 @@
+#User function Template for python3
+
+def sumElement(arr,n):
+    s=0
+    for i in arr:
+        s+=i
+    return s
