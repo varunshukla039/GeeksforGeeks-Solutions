@@ -13,3 +13,16 @@ class Solution:
         arr3=arr2+arr1
         for i in range(n):
             arr[i]=arr3[i]
+
+class Solution:
+    def segregateElements(self, arr, n):
+        l=[]
+        d=[]
+        for x in arr:
+            if x>0:
+                l.append(x)
+            else:
+                d.append(x)
+        z= l+d     
+        for i in range(n):
+            arr[i]=z[i]
