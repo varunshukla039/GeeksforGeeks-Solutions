@@ -1,1 +1,9 @@
 
+class Solution:
+    def find(self, arr, n, x):
+        if x not in arr:
+            return -1, -1
+
+        c = arr.count(x)  
+        i = arr.index(x)  
+        return i, (i + c - 1)
