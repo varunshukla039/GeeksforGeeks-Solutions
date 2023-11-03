@@ -1,1 +1,27 @@
 
+class Solution:
+    def LongestRepeatingSubsequence(self,str):
+        dp =[[-1 for i in range(len(str)+1)] for j in range(len(str)+1)]
+        return self.lrs(str, 0, 0, dp)
+
+
+    def lrs(self, s1, i, j, dp):
+    
+        if i >= len(s1) or j >= len(s1):
+            return 0
+    
+        if dp[i][j] != -1:
+            return dp[i][j]
+        
+        if dp[i][j] == -1:
+        
+
+            if s1[i] == s1[j] and i != j:
+                dp[i][j] = 1+self.lrs(s1, i+1, j+1, dp)
+            
+            else: 
+                dp[i][j] = max(self.lrs(s1, i, j+1, dp),
+                                    self.lrs(s1, i+1, j, dp))
+        
+
+        return dp[i][j]
