@@ -1,0 +1,26 @@
+class Solution:
+    def editDistance(self, s, t):
+        dp = [[float('inf')] * (len(t) + 1) for _ in range(len(s) + 1)]
+        
+        # Fill last row
+        for j in range(len(t) + 1):
+            dp[-1][j] = len(t) - j
+            
+        # Fill first col
+        for i in range(len(s) + 1):
+            dp[i][-1] = len(s) - i
+            
+        
+        for x in range(len(s)-1 , -1 ,-1):
+            for w in range(len(t)-1 , -1 , -1):
+                
+                if s[x] == t[w]:
+                    dp[x][w] = dp[x+1][w+1]
+                
+                else:
+                    
+                    dp[x][w] = 1 + min(dp[x + 1][w + 1], dp[x][w + 1], dp[x + 1][w])
+        
+        res = dp[0][0]
+        
+        return res 
