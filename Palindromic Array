@@ -1,0 +1,10 @@
+def PalinArray(arr ,n):
+    def palindrome(num):
+        
+        num_str = str(num)
+        return num_str == num_str[::-1]
+    
+    for num in arr:
+        if not palindrome(num):
+            return 0
+    return 1
