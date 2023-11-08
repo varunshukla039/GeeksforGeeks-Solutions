@@ -1,0 +1,9 @@
+
+class Solution:
+    def findIndex(self, a, N, key ):
+        if not key in a:
+            return -1, -1
+        first_index = a.index(key)
+        last_index = N - (a[::-1].index(key)) - 1
+
+        return first_index, last_index
